@@ -10969,7 +10969,7 @@ html {
 
 /* Gaya khusus untuk gambar profil di masthead */
 .masthead .masthead-avatar-frame img {
-  width: 15rem; /* lebar sesuai template asli */
+  width: 25rem; /* lebar sesuai template asli */
   height: auto; /* biarkan tinggi menyesuaikan rasio */
   border-radius: 16px; /* sudut melengkung, bukan lingkaran */
   object-fit: cover; /* opsional: agar gambar tetap proporsional saat di-crop */
