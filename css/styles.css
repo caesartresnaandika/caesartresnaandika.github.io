@@ -11100,13 +11100,3 @@ html {
 .copyright {
   background-color: #1a252f;
 }
-
-/* Custom CSS for Portfolio Images */
-.portfolio-item .portfolio-img-custom {
-  height: 250px;          /* Tentukan tinggi yang sama untuk semua gambar */
-  width: 100%;            /* Biarkan lebar mengikuti ukuran kolomnya */
-  object-fit: contain;    /* Ini bagian terpenting: memastikan gambar pas tanpa distorsi */
-  padding: 1rem;          /* (Opsional) Beri sedikit ruang di dalam box */
-  background-color: #f8f9fa; /* (Opsional) Beri warna latar belakang agar box terlihat */
-  border-radius: 0.5rem;  /* (Opsional) Samakan lengkungan sudutnya */
-}
