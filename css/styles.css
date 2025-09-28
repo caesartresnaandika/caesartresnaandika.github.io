@@ -10967,6 +10967,15 @@ html {
   color: #6c757d;
 }
 
+/* Ganti tampilan avatar dari lingkaran ke persegi panjang vertikal */
+.masthead .masthead-avatar-frame img {
+  border-radius: 16px !important; /* sudut melengkung, bukan lingkaran */
+  width: 15rem; /* sesuai dengan .masthead-avatar width */
+  height: auto; /* pertahankan rasio asli, atau ganti jika ingin tinggi tetap */
+  object-fit: cover; /* opsional: jika ingin crop gambar agar pas */
+  aspect-ratio: 3 / 4; /* opsional: buat rasio tinggi > lebar (misal 3:4) */
+}
+
 .masthead {
   padding-top: calc(6rem + 74px);
   padding-bottom: 6rem;
