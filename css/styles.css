@@ -10967,59 +10967,88 @@ html {
   color: #6c757d;
 }
 
-/* === PERBAIKAN MASTHEAD: FOTO PERSEGI PANJANG VERTIKAL + POSISI TEKS === */
-
-/* Hapus gaya lingkaran & atur ukuran besar */
-.masthead .masthead-avatar-frame img,
-.masthead .masthead-avatar-frame .masthead-avatar-custom {
-  width: 350px;
-  height: auto;
-  aspect-ratio: 3 / 4; /* rasio tinggi > lebar → persegi panjang vertikal */
-  border-radius: 20px; /* sudut melengkung */
-  border: 4px solid #e9ecef;
-  padding: 15px;
-  background-color: #fff;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  object-fit: cover;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Gaya khusus untuk gambar profil di masthead */
+.masthead .masthead-avatar-frame img {
+  width: 25rem; /* lebar sesuai template asli */
+  height: auto; /* biarkan tinggi menyesuaikan rasio */
+  border-radius: 16px; /* sudut melengkung, bukan lingkaran */
+  object-fit: cover; /* opsional: agar gambar tetap proporsional saat di-crop */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* tambahkan bayangan halus */
+  transition: transform 0.3s ease; /* efek hover (opsional) */
 }
 
-.masthead .masthead-avatar-frame img:hover,
-.masthead .masthead-avatar-frame .masthead-avatar-custom:hover {
+/* Efek hover (opsional) */
+.masthead .masthead-avatar-frame img:hover {
   transform: scale(1.03);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
-/* Atur container avatar */
+.masthead {
+  padding-top: calc(6rem + 74px);
+  padding-bottom: 6rem;
+}
+.masthead .masthead-heading {
+  font-size: 2.75rem;
+  line-height: 2.75rem;
+}
+.masthead .masthead-subheading {
+  font-size: 1.25rem;
+}
+
+@media (min-width: 992px) {
+  .masthead {
+    padding-top: calc(6rem + 104px);
+    padding-bottom: 6rem;
+  }
+  .masthead .masthead-heading {
+    font-size: 4rem;
+    line-height: 3.5rem;
+  }
+  .masthead .masthead-subheading {
+    font-size: 1.5rem;
+  }
+  /* --- GAYA KHUSUS UNTUK FOTO PROFIL DI MASTHEAD --- */
 .masthead .masthead-avatar-frame {
+  /* Pastikan container tidak memaksa bentuk lingkaran */
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* agar tidak dipaksa ke tengah vertikal */
-  margin-bottom: 1.5rem;
+  align-items: center;
 }
 
-/* Atur ulang padding masthead agar tidak terlalu jauh dari navbar dan section bawah */
+.masthead .masthead-avatar-frame .masthead-avatar-custom {
+  /* Ukuran gambar — PERBESAR DI SINI */
+  width: 350px; /* Lebar */
+  height: auto; /* Tinggi otomatis sesuai rasio */
+  /* Frame persegi panjang vertikal dengan sudut melengkung */
+  border-radius: 20px; /* Sudut melengkung */
+  border: 4px solid #e9ecef; /* Garis frame */
+  background-color: #fff; /* Latar belakang putih di balik gambar */
+  padding: 15px; /* Ruang antara gambar dan frame */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek hover */
+}
+
+/* Efek hover (opsional) */
+.masthead .masthead-avatar-frame .masthead-avatar-custom:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* --- ATUR JARAK ANTARA FOTO DAN TEKS / SECTION LAINNYA --- */
+
+/* Kurangi padding atas/bawah di masthead agar lebih dekat ke konten bawah */
 .masthead {
-  padding-top: 4.5rem !important;
-  padding-bottom: 2.5rem !important;
+  padding-top: 4rem; /* Kurangi dari 6rem+74px */
+  padding-bottom: 2rem; /* Kurangi dari 6rem */
 }
 
-/* Pastikan teks tetap di samping dan tidak turun ke bawah */
+/* Atur margin bawah dari container foto agar tidak terlalu jauh ke "PORTFOLIO" */
+.masthead .masthead-avatar-frame {
+  margin-bottom: 1rem; /* Atur jarak ke teks di sebelah kanan */
+}
+
+/* Jika teks "Hello, I'm DIKA" terlalu jauh, atur juga marginnya */
 .masthead .col-lg-6.text-center.text-lg-start {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* sejajar vertikal dengan gambar */
-  align-items: flex-start;
-  padding-top: 0.5rem;
-  padding-left: 1rem;
-}
-
-/* Responsif: di mobile, gambar lebih kecil */
-@media (max-width: 991.98px) {
-  .masthead .masthead-avatar-frame img,
-  .masthead .masthead-avatar-frame .masthead-avatar-custom {
-    width: 280px;
-  }
+  margin-top: 1rem; /* Sesuaikan jika diperlukan */
 }
 }
 .portfolio .portfolio-item {
