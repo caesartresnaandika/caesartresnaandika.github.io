@@ -11161,3 +11161,9 @@ html {
   object-fit: contain; /* Ini kuncinya: memastikan seluruh gambar muat */
   background-color: #f8f9fa; /* Warna latar belakang jika ada ruang kosong */
 }
+
+/* BARU: Aturan khusus agar logo BPM lebih kecil */
+.logo-bpm {
+    padding: 25px; /* Memberi ruang kosong di sekitar logo */
+    box-sizing: border-box; /* Memastikan padding tidak merusak layout */
+}
