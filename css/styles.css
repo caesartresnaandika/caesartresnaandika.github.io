@@ -10968,7 +10968,7 @@ html {
 }
 
 /* Ganti tampilan avatar dari lingkaran ke persegi panjang vertikal */
-.masthead .masthead-avatar-frame img {
+.masthead .masthead-avatar {
   border-radius: 16px !important; /* sudut melengkung, bukan lingkaran */
   width: 15rem; /* sesuai dengan .masthead-avatar width */
   height: auto; /* pertahankan rasio asli, atau ganti jika ingin tinggi tetap */
@@ -10986,9 +10986,6 @@ html {
 }
 .masthead .masthead-subheading {
   font-size: 1.25rem;
-}
-.masthead .masthead-avatar {
-  width: 15rem;
 }
 
 @media (min-width: 992px) {
