@@ -11153,3 +11153,11 @@ html {
     font-size: 1.5rem;
     color: white;
 }
+
+/* Custom CSS for Portfolio Images */
+.portfolio-img-custom {
+  width: 100%; /* Lebar tetap mengisi wadah */
+  height: 290px; /* Atur tinggi yang sama untuk semua gambar agar rapi */
+  object-fit: contain; /* Ini kuncinya: memastikan seluruh gambar muat */
+  background-color: #f8f9fa; /* Warna latar belakang jika ada ruang kosong */
+}
